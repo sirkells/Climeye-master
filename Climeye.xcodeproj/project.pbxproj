@@ -13,6 +13,7 @@
 		02CBCA821FFF8AA90062823F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CBCA811FFF8AA90062823F /* Images.xcassets */; };
 		02CBCA851FFF8AA90062823F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CBCA831FFF8AA90062823F /* LaunchScreen.storyboard */; };
 		02CBCA941FFFAC440062823F /* CitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBCA931FFFAC440062823F /* CitySearchViewController.swift */; };
+		4DB4287A1C89B6B0F8FE1CF8 /* Pods_Climeye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BAA79664A9D7636C2DB7FF7 /* Pods_Climeye.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		02CBCA841FFF8AA90062823F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02CBCA861FFF8AA90062823F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02CBCA931FFFAC440062823F /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
+		0BBE2DC41BCC051D0993E78F /* Pods-Climeye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Climeye.release.xcconfig"; path = "Pods/Target Support Files/Pods-Climeye/Pods-Climeye.release.xcconfig"; sourceTree = "<group>"; };
+		20BCAE08BA6C8C125DFEE3AE /* Pods-Climeye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Climeye.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Climeye/Pods-Climeye.debug.xcconfig"; sourceTree = "<group>"; };
+		8BAA79664A9D7636C2DB7FF7 /* Pods_Climeye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Climeye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB4287A1C89B6B0F8FE1CF8 /* Pods_Climeye.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				02CBCA791FFF8AA90062823F /* Climeye */,
 				02CBCA781FFF8AA90062823F /* Products */,
+				65D9F98B8A3D393B62430727 /* Pods */,
+				C114A3F58E492B696226301E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +98,23 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		65D9F98B8A3D393B62430727 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20BCAE08BA6C8C125DFEE3AE /* Pods-Climeye.debug.xcconfig */,
+				0BBE2DC41BCC051D0993E78F /* Pods-Climeye.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C114A3F58E492B696226301E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BAA79664A9D7636C2DB7FF7 /* Pods_Climeye.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02CBCA891FFF8AA90062823F /* Build configuration list for PBXNativeTarget "Climeye" */;
 			buildPhases = (
+				60A13E648068FD58C53FDF37 /* [CP] Check Pods Manifest.lock */,
 				02CBCA731FFF8AA90062823F /* Sources */,
 				02CBCA741FFF8AA90062823F /* Frameworks */,
 				02CBCA751FFF8AA90062823F /* Resources */,
+				93D939590249983B16589DD5 /* [CP] Embed Pods Frameworks */,
+				C32DDC90D1E9007E11CEAC63 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,6 +184,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60A13E648068FD58C53FDF37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Climeye-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93D939590249983B16589DD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Climeye/Pods-Climeye-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Climeye/Pods-Climeye-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C32DDC90D1E9007E11CEAC63 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Climeye/Pods-Climeye-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		02CBCA731FFF8AA90062823F /* Sources */ = {
@@ -300,6 +385,7 @@
 		};
 		02CBCA8A1FFF8AA90062823F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20BCAE08BA6C8C125DFEE3AE /* Pods-Climeye.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +401,7 @@
 		};
 		02CBCA8B1FFF8AA90062823F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BBE2DC41BCC051D0993E78F /* Pods-Climeye.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
