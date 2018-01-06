@@ -58,6 +58,8 @@ static const CGFloat SVProgressHUDLabelSpacing = 8.0f;
 @property (nonatomic, readonly) UIWindow *frontWindow;
 
 #if TARGET_OS_IOS && __IPHONE_OS_VERSION_MAX_ALLOWED >= 100000
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunguarded-availability"
 @property (nonatomic, strong) UINotificationFeedbackGenerator *hapticGenerator;
 #endif
 
