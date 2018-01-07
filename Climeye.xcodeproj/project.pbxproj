@@ -13,6 +13,7 @@
 		02CBCA821FFF8AA90062823F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02CBCA811FFF8AA90062823F /* Images.xcassets */; };
 		02CBCA851FFF8AA90062823F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02CBCA831FFF8AA90062823F /* LaunchScreen.storyboard */; };
 		02CBCA941FFFAC440062823F /* CitySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBCA931FFFAC440062823F /* CitySearchViewController.swift */; };
+		02CBCA9620024A750062823F /* WeatherDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CBCA9520024A750062823F /* WeatherDataModel.swift */; };
 		4DB4287A1C89B6B0F8FE1CF8 /* Pods_Climeye.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BAA79664A9D7636C2DB7FF7 /* Pods_Climeye.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		02CBCA841FFF8AA90062823F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02CBCA861FFF8AA90062823F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02CBCA931FFFAC440062823F /* CitySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitySearchViewController.swift; sourceTree = "<group>"; };
+		02CBCA9520024A750062823F /* WeatherDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataModel.swift; sourceTree = "<group>"; };
 		0BBE2DC41BCC051D0993E78F /* Pods-Climeye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Climeye.release.xcconfig"; path = "Pods/Target Support Files/Pods-Climeye/Pods-Climeye.release.xcconfig"; sourceTree = "<group>"; };
 		20BCAE08BA6C8C125DFEE3AE /* Pods-Climeye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Climeye.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Climeye/Pods-Climeye.debug.xcconfig"; sourceTree = "<group>"; };
 		8BAA79664A9D7636C2DB7FF7 /* Pods_Climeye.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Climeye.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 		02CBCA8C1FFF8AF00062823F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				02CBCA9520024A750062823F /* WeatherDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02CBCA9620024A750062823F /* WeatherDataModel.swift in Sources */,
 				02CBCA941FFFAC440062823F /* CitySearchViewController.swift in Sources */,
 				02CBCA7D1FFF8AA90062823F /* WeatherViewController.swift in Sources */,
 				02CBCA7B1FFF8AA90062823F /* AppDelegate.swift in Sources */,
