@@ -13,10 +13,17 @@ import SwiftyJSON
 
 class WeatherViewController: UIViewController, CLLocationManagerDelegate, ChangeCityDelegate {
     
+    @IBOutlet weak var switchButton: UISwitch!
+    
     //Creating constants
     var weatherURL = "http://api.openweathermap.org/data/2.5/weather"
     var apiKey = "199edcc8d65de48371141727196d8b70"
     
+    @IBAction func `switch`(_ sender: UISwitch) {
+        if sender.isOn {
+            updateUIWithWeatherData()
+        }
+    }
     let locationManager = CLLocationManager()
     let weatherDataModel = WeatherDataModel()
     
